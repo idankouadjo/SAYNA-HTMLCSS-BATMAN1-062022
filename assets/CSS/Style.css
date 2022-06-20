@@ -8,12 +8,12 @@
     --yellow-color: #FFFF00;
     --yellow-light: #F8F184;
     --blue-color: #19587D;
-    --red-color: #B11313;
+    --red-color: #b11313;
     --black-light: #0D0E09;
-    --gradient-white: #eddebfa2;
-    --blue-actif: #19587D;
+    --gradient-white: #EDDEBF;
+    --blue-actif: #19587d;
     --gradient-red: #89000988;
-    --white-dark: #C4C4C4;
+    --white-dark: #c4c4c4;
     --black-color: #000000;
     --white-color: #FFFFFF;
 }
@@ -24,13 +24,18 @@
     box-sizing: border-box;
 }
 
-h1{
-    font-family: rajdhani;
+.titre h1{
+    font-family: 'Rajdhani';
     font-size: 36px;
     font-weight: 400;
 }
+.titre h2 {
+    font-family: 'Space-Grotesk';
+    font-size: 12px;
+    font-weight: bold;
+}
 button{
-    font-family: rajdhani;
+    font-family: 'Rajdhani';
     font-size: 20px;
     font-weight: 400;
 }
@@ -39,12 +44,36 @@ button{
     width: 80%;
     margin: 0 auto;
 }
+
 body{
     background-color: black;
     color: white;
     font-family: 'Space-Grotesk';
     font-weight: 300;
 }
+
+.up-bar{
+    border-top: #727272 2px solid;
+    position: relative;
+    top: 132px;
+    width: 86%;
+    left: 102px
+}
+
+.left-bar{
+    border-left: #BCBBBD 1px solid;
+    position:fixed;
+    left: 102px;
+    height: 100%;
+}
+
+.right-bar{
+    border-left: #BCBBBD 1px solid;
+    position:fixed;
+    right: 102px;
+    height: 100%;
+}
+
 /* Design de la navigation*/
 
 nav{
@@ -68,6 +97,10 @@ nav ul a{
 
 nav ul a:hover{
     color: var(--yellow-color)
+}
+
+.logo:hover, .social:hover, .scroll .logo-batman:hover {
+    filter: invert(4%) sepia(100%) saturate(7500%) hue-rotate(358deg) brightness(104%) contrast(103%);
 }
 
 /* Design de la partie en tete Hero*/
@@ -108,23 +141,284 @@ nav ul a:hover{
     background: linear-gradient(
         80deg,var(--gradient-white),var(--gradient-red)
     );
-    box-shadow:var(--black-color)5px 5px 60px ; 
+    box-shadow:var(--black-color)5px 5px 60px ;
+    opacity: 40%; 
+}
+
+.btn:hover{
+    opacity: 100%;
 }
 
 
 #hero .fleche{
     display: block;
     margin: 0 auto;
+    margin-top: 285px;
 }
+
+.scroll{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    right: 80px;
+    top: 230px;
+}
+
+.scroll .social{
+    margin-top: 15px;
+}
+
 
 /* Design de la section batman-personnage */
-.batman-personnage{
-    display: flex;
-    justify-content: space between;
+
+.bathome12{
+    position: relative;
+    width: 100%;
+    margin-top: -10%;
+    margin-bottom: -7%;
+    margin-left: 70%;
+}
+.bathome13{
+    position: absolute;
+    margin-left: 15%;
+    margin-top: -5%;
+    height: 300;
 }
 
-/* Design des sous-titre */
-.sous-titre{
-    align-items: center;
+.bathome13 .bathome13-img{
+    width: 70%;
+    height: 70%;
+    padding-top: 10px;
+}
+
+#batman-cinema, #Nemesis, #allies, #batman-justice-league{
+    margin-top: 100px;
+}
+
+.batman-personnage{
+    display: flex;
+    justify-content: space-between;
+}
+
+.batman-item:hover {
+    zoom: 110%;
+}
+
+#batman-cinema .titre, #Nemesis .titre, #allies .titre, #batman-justice-league .titre{
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 30px 0;
+}
+
+#batman-cinema .description, #Nemesis .description, #allies .description, #batman-justice-league .description{
+    margin-bottom: 40px;
+    text-align: justify;
+    width: 80%;
+    font-size: 21px;
+}
+
+
+#batman-cinema .personnage-info, #Nemesis .personnage-info, #allies .personnage-info, #batman-justice-league .personnage-info {
+    text-align: center;
     justify-content: center;
-} 
+}
+
+/* Design de la section multimedia */
+#multimedia button{
+    position: relative;
+    top: 155px;
+    background: none;
+    border: none;
+}
+
+#multimedia button.right{
+    float: right;
+}
+
+#multimedia .slider-multimedia{
+    display: flex;
+    width: 60%;
+    margin: 40px auto;
+}
+
+#multimedia .slider-image{
+    width: 100%;
+}
+
+#multimedia .slider-content{
+    padding: 15px;
+    background: linear-gradient( -50deg, var(--blue-actif) -80%,var(--black-light) 40%,var(--white-color) 150%);
+
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#multimedia p{
+    font-size: 14px;
+}
+
+#multimedia .yellow{
+    color: var(--yellow-color);
+}
+
+/* Design de la partie Contact */
+#contact{
+    background: linear-gradient( -50deg, var(--blue-actif) -80%,var(--black-light) 40%,var(--white-color) 150%);
+    padding: 70px 0;
+}
+
+#contact .form{
+    width: 50%;
+    margin: 0 auto;
+}
+
+#contact h2{
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 32px;
+}
+
+#contact .titre{
+    display: block;
+    margin: 28px 0;
+}
+
+#contact .form input[type='email'], textarea{
+    display: block;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    width: 80%;
+    border-bottom: 2px solid var(--white-dark);
+    background-color: transparent;
+    padding: 10px 0;
+}
+
+#contact .form-newsletter{
+    justify-content: space-between;
+    margin: 15px 0;
+    width: 80%;
+    border-bottom: 2px solid var(--white-dark);
+}
+
+#contact .news{
+    margin: 15px 0;
+    width: 80%;
+    border-bottom: 2px solid var(--white-dark);
+}
+
+#contact .icon img{
+    transform: rotate(90deg);
+    width: 20px;
+}
+
+::-webkit-input-placeholder{
+    color: #F8F184;
+    font-size: 15px;
+}
+
+::-moz-placeholder{
+    color: #F8F184;
+    font-size: 15px;
+}
+
+:-ms-input-placeholder{
+    color: #F8F184;
+    font-size: 15px;
+}
+
+::-ms-input-placeholder{
+    color: #F8F184;
+    font-size: 15px;
+}
+
+::placeholder{
+    color: #F8F184;
+    font-size: 15px;
+}
+
+.btn-group{
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.form input[type='radio']{
+    opacity: 0;
+}
+
+.btn-group label{
+    cursor: pointer;
+    border: 2px solid;
+    padding: 10px;
+        -o-border-image: linear-gradient(
+            69deg, var(--white-dark), var(--blue-actif)) 1;
+        border-image: linear-gradient(
+            69deg, var(--white-dark), var(--blue-actif)) 1;
+    font-size: 20px;
+}
+
+input[type='submit']{
+    display: block;
+    width: 230px;
+    margin: 25px auto;
+    padding: 15px 0;
+    cursor: pointer;
+    border: none;
+    font-family: 'Rajdhani';
+    font-size: 20px;
+    color: var(--white-color);
+    background: linear-gradient(80deg,var(--gradient-white),var(--gradient-red));
+}
+
+#citations{
+    margin: 90px;
+}
+
+#citations .citation-carte{
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+#citations .citation-auteur{
+    padding: 30px;
+    font-size: 14px;
+    font-family: 'Rajdhani';
+}
+
+#citations .guillemet-close{
+    float: right;
+}
+
+footer{
+    margin-top: 162px;
+}
+
+footer .texte-footer{
+    text-align: center;
+    font-size: 10px;
+}
+
+footer .social-footer{
+    text-align: center;
+    margin: 50px 0;
+}
+
+footer .social-item{
+    padding: 10px;
+}
+
+/* fade in */
+
+.titre{
+    animation: fade-in 5s ease-in alternate ;
+}
+
+@-webkit-keyframes fade-in{
+    0% {width:100%}
+    40% {width:0%}
+    60% {width:0%;}
+    100% {width:100%;}
+}
